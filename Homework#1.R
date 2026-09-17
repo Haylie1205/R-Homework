@@ -55,7 +55,7 @@ first_two_rows <- score_matrix[1:2, , drop = FALSE]
 # 3. Extract course from course_record three different ways
 extract_1 <- course_record["course"]
 extract_2 <- course_record[["course"]]
-extract_3 <- course_record\$course
+extract_3 <- course_record/$course
 
 # [Written Answer]
 # The single bracket `[` extracts a sublist containing the element, keeping the original list structure. 
@@ -72,11 +72,11 @@ students\$average <- (studentsquiz1 + studentsquiz2) / 2
 studentsexcellent <- studentsaverage >= 90
 
 # 3 & 4. Select section A students whose average is at least 80, keeping specific columns
-sec_A_high <- students[students\(section == "A" & students\)average >= 80, c("student_id", "section", "average")]
+sec_A_high <- students[students/(section == "A" & students\)average >= 80, c("student_id", "section", "average")]
 
 # 5. Create a named numeric vector of all student averages using student IDs as names
-student_averages <- students\$average
-names(student_averages) <- students\$student_id
+student_averages <- students/$average
+names(student_averages) <- students/$student_id
 
 # [Written Answer]
 # These calculations are vectorized because R automatically applies math operations and logical comparisons to every element in the vector simultaneously. 
